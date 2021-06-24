@@ -19,8 +19,8 @@ module.exports.okRes = (res, obj, statusCode = 200) => {
  */
 module.exports.errRes = (res, error, statusCode = 400) => {
   res.status(statusCode);
-  if (typeof error == "object")
-    error = error.message ? error.message : "Something went wrong";
+  // if (typeof error == "object")
+  //   error = error.message ? error.message : "Something went wrong";
 
   return res.json({ status: false, errMsg: error, data: null });
 };
